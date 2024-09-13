@@ -8,7 +8,7 @@
   padding: 30px !important;
   width: 900px !important;
   max-width: 900px !important;
-  max-height: 100%;
+  max-height: 95%;
 }
 .productModal h3 {
   font-size: 23px;
@@ -57,12 +57,12 @@
 
 /***** galary css *******/
 .zoom-galary .product-galary-slider {
-  padding-top: 20px !important;
+  padding-top: 10px !important;
 }
 .product-galary-slider .slick-slide .item {
  padding: 5px !important;
  overflow: hidden !important;
- height: auto;
+ height: 120px !important;
  width: 100%;
  border: none;
  outline: none;
@@ -81,6 +81,7 @@
 .product-galary-slider .slick-current{
  border: 2px solid green;
  border-radius: 15px;
+ height: 105px !important;
 } 
 .product-galary-slider .slick-arrow.slick-prev {
  margin-left: 0% !important;
@@ -186,6 +187,8 @@
   z-index: 100;
 }
 
+
+/**** responsive css *****/
 @media (min-width : 320px) and (max-width: 576px){
 .productModal .MuiPaper-elevation {
     padding: 30px !important;
@@ -210,8 +213,25 @@
   font-weight: 600;
   margin-top: 8px !important;
 }
-
+.productModal .close_btn {
+  position: absolute;
+  top: 7px;
+  right: 8px;
+}
 
 }
 
 
+/*** table css ****/
+@media (min-width : 576px) and (max-width: 768px){
+  .productModal .MuiPaper-elevation {
+    padding: 30px !important;
+    width: 700px !important;
+    max-width: 700px !important;
+    max-height: 100%;
+}
+.product-galary-slider .slick-current{
+  height: 80px !important;
+ } 
+
+}

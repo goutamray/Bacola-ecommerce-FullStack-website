@@ -655,7 +655,7 @@ button.mobile-search-box {
 }
 .dynamic-search {
   background-color: #efefef;
-  height: 295px;
+  height: 720px;
   width: 100%;
   position: absolute;
   left: 0;
@@ -767,12 +767,10 @@ button.mobile-search-box {
  color: #000;
  padding: 5px 0px;
 }
-
 .main-menu-phone button{
   width: 100%;
   background-color: red;
   margin-bottom: 8px;
-
 }
 .main-menu-phone button a {
   color: #fff;
@@ -800,6 +798,70 @@ button .myAcc{
 
 
 
+/***** tablet css ******/
+@media (min-width : 576px) and (max-width: 768px){
+.header-text-bar{
+  display: flex;
+  justify-content: space-between;
+}
+.second-bar .offer-text {
+  display: none !important; 
+}
+.hide-offer-text{
+  width: 0px !important;
+}
+.info p {
+  display: none ;
+}
+.info a {
+  display: none ;
+}
+.header-custom-col{
+  width: 60%;
+}
+.middle-header-bar .logo p {
+  display: none;
+}
+.menu-part-middle {
+  display: flex;
+  gap: 12px;
+}
+.header-search {
+  height: 48px;
+  padding: 8px 6px !important;
+}
+.header-search  button {
+  top: 1px;
+  right: 3px;
+}
+.header-search input {
+  position: relative;
+  top: -7px;
+}
+.menu-part-middle button.countryDrop {
+  display: none !important;
+}
+.col-sm-2.logo-part {
+  width: 22% !important;
+}
+.col-sm-10.menu-right-part{
+  width: 77%;
+}
+
+.bottom-footer-part{
+  display: none;
+  width: 0% !important;
+}
+.bottom-footer-right-part{
+  width: 100% !important;
+}
+.main-menu ul li a {
+  font-size: 13px;
+  font-weight: 500 !important;
+  padding: 10px 8px !important;
+}
+
+}
 
 
 

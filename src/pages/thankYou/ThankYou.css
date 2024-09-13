@@ -24,6 +24,27 @@ h2.order-details{
 
 
 
+/******* Responsive css ******/
+@media (min-width : 320px) and (max-width: 576px){
+  h2.thank-message{
+    font-size: 22px;
+  }
+  table.thank-table{
+    display: flex;
+    justify-content: space-between;
+  }
+  .custom-order{
+    display: flex;
+    flex-direction: column;
+   justify-content: flex-end;
+  }
+  .custom-order.output{
+    display: flex;
+    flex-direction: column;
+   justify-content: flex-end;
+   align-items: flex-end;
+  }
+}
 
 
 

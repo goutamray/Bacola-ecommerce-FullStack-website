@@ -18,7 +18,7 @@ const Navigation = () => {
         <nav className="header-bottom ">
           <div className="container ">
              <div className="row my-custom-row">
-                 <div className="col-sm-3">
+                 <div className="col-sm-3 bottom-footer-part">
                      <div className="category-tab">
                        <button onClick={() => setIsOpemSideNav(!isOpenSideNav)}> 
                             <span className="menu"> <IoMenu /> </span>
@@ -40,7 +40,7 @@ const Navigation = () => {
                         </div>
                      </div>
                  </div>
-                 <div className="col-sm-9">
+                 <div className="col-sm-9 bottom-footer-right-part">
 
                    <div className="main-menu">
                       <ul className="list list-inline">

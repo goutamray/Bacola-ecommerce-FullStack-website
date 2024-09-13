@@ -1,3 +1,4 @@
+
 import { useRef } from "react";
 
 import Slider from "react-slick";
@@ -6,9 +7,7 @@ import Slider from "react-slick";
 import InnerImageZoom from 'react-inner-image-zoom';
 import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
 
-
-
-const ProductZoom = ({ images, discount }) => {
+const ProductZoom = ( { images, discount } ) => {
   const zoomSliderBig = useRef(); 
   const zoomSlider = useRef(); 
 
@@ -38,7 +37,6 @@ const ProductZoom = ({ images, discount }) => {
   const goto = ( index) => {
     zoomSlider.current.slickGoTo(index);
     zoomSliderBig.current.slickGoTo(index);
-
   };
 
   return (
@@ -46,43 +44,44 @@ const ProductZoom = ({ images, discount }) => {
       <div className="productZoom">
           <div className="product-zoom-box">
                           <div className="discount-pro">
-                             <span> { discount } % </span>
+                             <span> {discount } % </span>
                           </div>
-                       <Slider {...settings2} className="product-galary-slider-big" ref={zoomSliderBig}>    
-                          {
-                            images?.map((item, index) => {
-                              return  <div className="item big-photo" key={index}>
+                       <Slider {...settings2} className="product-galary-slider-big" ref={zoomSliderBig}>   
+
+                        {
+                          images?.map((photo, index)=> {
+                            return  <div className="item" key={index}>
                               <div className="product-zoom">
-                                  <InnerImageZoom zoomType="hover"
-                                  zoomScale= "1"  src={item}  /> 
-                                  
-                            </div>
-                          </div>
-                            })
-                          }
-                                   
+                                     <InnerImageZoom zoomType="hover" zoomScale= "1"  src={photo}  /> 
+                                 </div>
+                              </div>
+                          })
+                        }                     
                             </Slider>
                        </div>
                      {/*galary image start  */}
                       <div className="zoom-galary">
                         <Slider {...settings} className="product-galary-slider" ref={zoomSlider}>
-
                         {
-                          images?.map((item, index) => {
-                            return  <div className="item small-photo" key={index}>
-                            <img src={item} alt="zoom" onClick={() => goto(index)}/>
+                          images?.map((photo, index)=> {
+                            return <div className="item small-photo" key={index}>
+                            <img src={photo} alt="zoom" onClick={() => goto(index)}/>
                         </div>
                           })
-                        }
-                          
-                       </Slider>
+                        }  
+                  
+                        </Slider>
                       </div>
-      </div>
-    </>
+                  </div>
+          </>
   )
 }
 
 export default ProductZoom
+
+
+
+
 
 
 

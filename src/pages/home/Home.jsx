@@ -104,7 +104,7 @@ const Home = () => {
       <div className="homeBanner py-5 ">
         <div className="container">
           <div className="row">
-            <div className="col-sm-12 col-md-3">
+            <div className="col-sm-12 col-md-3 hide-tab-banner">
                <div className="sticky">
                      <div className="info rounded">
                         <h2> Bacola Natural Foods </h2>

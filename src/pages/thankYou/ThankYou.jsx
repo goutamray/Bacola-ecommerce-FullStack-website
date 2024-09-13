@@ -16,9 +16,9 @@ const ThankYou = () => {
           <div className="row">
             <div className="col">
               <div className="order-full-data">
-                 <table className="table">
+                 <table className="table thank-table">
                    <thead>
-                     <tr>
+                     <tr className="custom-order">
                       <th> Order number: </th>
                       <th> Date: </th>
                       <th> Email: </th>
@@ -27,7 +27,7 @@ const ThankYou = () => {
                      </tr>
                    </thead>
                    <tbody>
-                    <tr>
+                    <tr className="custom-order output">
                       <td> 5150 </td>
                       <td> September 4, 2024 </td>
                       <td> developergoutam53@gmail.com </td>

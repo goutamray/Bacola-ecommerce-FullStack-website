@@ -624,6 +624,17 @@ img.rounded.my-custom-size {
 
 /**** Min 576px & Max 768px  ******/
 @media (min-width : 576px) and (max-width: 768px){
+ .hide-tab-banner{
+    display: none;
+    width: 0% !important;
+ }
+  .col-sm-12.col-md-9.product-row {
+    width: 100% !important;
+  }
+  .product_row_all.product-row2 {
+    flex-wrap: wrap;
+    gap: 20px;
+}
 .product_row_all.product-row2 .item.product-item {
     width: 31%;
 }

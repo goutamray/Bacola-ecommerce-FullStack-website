@@ -97,8 +97,8 @@ const Header = ( ) => {
       {/* second bar part  */}
       <div className="second-bar">
         <div className="container">
-            <div className="row align-items-center">
-               <div className="col-sm-4">
+            <div className="row align-items-center header-text-bar">
+               <div className="col-sm-4 header-custom-col">
                  <div className="menu-top">
                    <ul>
                     <li> 
@@ -119,7 +119,7 @@ const Header = ( ) => {
                    </ul>
                  </div>
                </div>
-               <div className="col-sm-4">
+               <div className="col-sm-4 hide-offer-text">
                  <div className="offer-text">
                     <span> <MdOutlineSecurity /> </span>
                     <p> 100% Secure delivery without contacting the courier

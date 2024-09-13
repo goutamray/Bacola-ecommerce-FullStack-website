@@ -44,7 +44,7 @@ const CountryDrop = () => {
        setCountryList(list); 
 
      }else{
-      setCountryList(context.countryList)
+      setCountryList(context?.countryList)
      }
   }
 
@@ -56,10 +56,10 @@ const CountryDrop = () => {
             <div className="my-select ">
                 <span className="location"> Your Location </span>
                 <span className="country"> 
-                  {  context.selecetedCountry !== "" ? 
-                     context.selecetedCountry?.length > 12 ? 
-                     context.selecetedCountry?.substr(0, 12) + '...' : 
-                     context.selecetedCountry :
+                  {  context?.selecetedCountry !== "" ? 
+                     context?.selecetedCountry?.length > 12 ? 
+                     context?.selecetedCountry?.substr(0, 12) + '...' : 
+                     context?.selecetedCountry :
                      "Select Location" }
                </span>
             </div>

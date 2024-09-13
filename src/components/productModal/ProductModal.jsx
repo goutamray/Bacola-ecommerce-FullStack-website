@@ -120,7 +120,7 @@ const ProductModal = ({ closeProductModal, data }) => {
                 </div>
                 <hr />
              <div>
-               <div className="product-details-popup pt-3">
+               <div className="product-details-popup">
                   <div className="row">
                     <div className="col-md-5 ">
                       <ProductZoom images={data?.photo} discount={data?.discount}/>
