@@ -1,0 +1,26 @@
+
+
+.order-truck{
+  padding: 50px 0px;
+}
+.order-details p{
+  margin-bottom: 20px;
+}
+form .my-2 label{
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.track-btn{
+  padding: 8px 20px;
+  border: none;
+  background-color: rgb(14, 14, 98);
+  border-radius: 5px;
+  color: #fff;
+}
+
+
+
+
+
+

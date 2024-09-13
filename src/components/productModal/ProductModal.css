@@ -1,0 +1,217 @@
+
+
+/***** product modal css ******/
+.productModal {
+  position: relative;
+}
+.productModal .MuiPaper-elevation {
+  padding: 30px !important;
+  width: 900px !important;
+  max-width: 900px !important;
+  max-height: 100%;
+}
+.productModal h3 {
+  font-size: 23px;
+  font-weight: 500;
+  font-family: var(--font-secondary);
+  color: var(--font-secondary);
+  margin-top: 0px;
+  margin-bottom: 8px;
+}
+.productModal .close_btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: block;
+}
+.productModal .close_btn svg {
+  font-size: 22px !important;
+}
+.brand{
+  padding-right: 20px !important;
+}
+.brand span {
+  padding-right: 10px !important;
+}
+
+
+/**** product zoom  ******/
+.product-zoom{
+  border: 1px solid rgb(203, 203, 203);
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  z-index: 99999;
+}
+.product-zoom img{
+  height: 400px !important;
+  width: 100%;
+}
+
+
+/***** galary css *******/
+.zoom-galary .product-galary-slider {
+  padding-top: 20px !important;
+}
+.product-galary-slider .slick-slide .item {
+ padding: 5px !important;
+ overflow: hidden !important;
+ height: auto;
+ width: 100%;
+ border: none;
+ outline: none;
+}
+.product-galary-slider .slick-slide  img{
+ border-radius: 10px;
+ overflow: hidden !important;
+ width: 100%;
+ outline: none;
+ border: none;
+}
+.product-galary-slider .slick-track {
+  margin-left: 0px; 
+  margin-right: 20px; 
+}
+.product-galary-slider .slick-current{
+ border: 2px solid green;
+ border-radius: 15px;
+} 
+.product-galary-slider .slick-arrow.slick-prev {
+ margin-left: 0% !important;
+ color: black;
+}
+.product-galary-slider button.slick-arrow.slick-prev {
+ margin-top: 20px;
+ color: black;
+}
+.product-galary-slider .slick-arrow.slick-next {
+ margin-right: 2% !important;
+ margin-top: 20px !important;
+}
+
+
+
+/****** description  *****/
+.product-content .price-total .regular-price {
+ font-size: 25px;
+}
+.product-content .price-total .delete-price{
+  font-size: 18px;
+}
+.product-content .stock{
+  font-size: 14px;
+  color: var(--secondary-color);
+  background-color: #e5f8ed;
+  padding: 4px 8px ;
+  border-radius: 5px;
+  width: 80px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 5px;
+}
+.product-content p.desc{
+  width: 90% !important;
+  font-size: 13px;
+  font-weight: 400;
+  font-family: var(--font-secondary);
+  color: var(--heading-color);
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+.product-content button.cart-btn{
+  font-size: 16px;
+  font-weight: 500;
+  background-color: var(--hover-color);
+  font-family: var(--font-secondary);
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 25px;
+}
+.quantityDrop{
+  width: 150px;
+  gap: 10px;
+}
+.quantityDrop button{
+  width: 40px !important;
+  min-height: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+  border: 1px solid rgb(191, 191, 191);
+  display: block;
+  background-color: #edeef5;
+  color: #000;
+}
+.quantityDrop button svg{
+  color: #000;
+}
+.quantityDrop input{
+  width: 30px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+.wish-compare{
+  display: flex ;
+  gap: 10px;
+  margin-top: 30px;
+}
+.wish-compare button{
+   border: 1px solid rgb(208, 208, 208);
+   border-radius: 25px;
+   padding: 3px 10px;
+   text-transform: uppercase;
+   color: #000;
+   font-family: var(--font-secondary);
+   font-size: 14px;
+}
+.product-zoom-box{
+  position: relative;
+}
+.discount-pro span{
+  background-color: var(--primary-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 13px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+}
+
+@media (min-width : 320px) and (max-width: 576px){
+.productModal .MuiPaper-elevation {
+    padding: 30px !important;
+    width: 380px !important;
+}
+.css-1cvd0nv-MuiDialog-container {
+  height: 158% !important;
+}
+.css-zw3mfo-MuiModal-root-MuiDialog-root {
+  overflow-y: scroll;
+}
+.productModal h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.product-zoom {
+  width: 100%;
+  height: 300px;
+}
+.product-content .product-name{
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 8px !important;
+}
+
+
+}
+
+

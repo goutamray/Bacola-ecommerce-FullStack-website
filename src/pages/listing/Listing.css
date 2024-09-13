@@ -1,0 +1,233 @@
+
+.product-listing-page{
+  padding: 20px 0px;
+}
+.custom-background{
+  background-image: url(../../assets/banner/bacola-banner-18.jpg);
+  height: 150px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+.bradcrumb h2{
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.product-listing-page .productListing{
+ gap: 20px;
+}
+.product-listing-page .sidebar{
+  width: 20%;
+  flex: 0 0 20%;
+}
+.product-listing-page .sidebar .filterBox{
+  margin-bottom: 30px;
+}
+.product-listing-page .sidebar .filterBox h6{
+ font-size: 18px;
+ text-transform: uppercase;
+ font-weight: 700;
+ margin-bottom: 10px;
+}
+.product-listing-page .content_right{
+  width: 77%;
+  flex: 0 0 77%;
+}
+.sidebar .sticky{
+  position: sticky;
+  top: 50px;
+}
+.productListing{
+  padding: 20px 0px;
+}
+.scroll{
+  padding-left: 8px;
+  max-height: 200px;
+  overflow-y: scroll !important;
+}
+.scroll::-webkit-scrollbar{
+  width: 5px;
+  height: 5px;
+}
+.scroll ul li{
+  margin-bottom: 0px;
+  width: 100%;
+}
+.css-ahj2mt-MuiTypography-root {
+  font-size: 14px !important;
+}
+.css-i4bv87-MuiSvgIcon-root {
+  width: 20px;
+  height: 20px;
+}
+
+/**** Range css ****/
+.priceRange .second-price{
+  padding-left: 20px !important;
+}
+.range-slider {
+  height: 5px !important;
+}
+.range-slider .range-slider__thumb {
+  width: 16px;
+  height: 16px;
+  background: #0646f3;
+}
+
+
+/**** Grid box css *****/
+.showBy{
+  background-color: #f7f8fd;
+  padding: 20px 0px;
+  border-radius: 5px;
+}
+.showBy  .left-grid{
+  padding-left: 20px;
+}
+.showBy  .left-grid  button{
+  border: none;
+  background: transparent;
+  text-transform: capitalize;
+}
+.showBy  .left-grid button svg{
+  font-size: 22px;
+  color: #000;
+  opacity: 0.5;
+}
+.showBy .left-grid  button.acti svg{
+  opacity: 1 !important;
+}
+
+.showBy  .left-grid button:hover svg{
+  opacity: 1;
+}
+.drop-btn span svg{
+  margin-left: 5px !important;
+}
+.showPerPageDrop li.MuiButtonBase-root.MuiMenuItem-root.MuiMenuItem-gutters.MuiMenuItem-root.MuiMenuItem-gutters.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
+  width: 82px;
+}
+
+/**** view css ******/
+.productListingGrid{
+   padding-top: 20px;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+  
+}
+.productListingGrid p.no-product{
+  padding: 20px 0px;
+  margin-left: 50%;
+}
+.productListingGrid .product-item.four{
+  width: 23%;
+} 
+.productListingGrid .product-item.three{
+  width: 31.5%;
+} 
+.productListingGrid .product-item.one{
+  width: 100% !important;
+  display: flex;
+  align-items: center;
+} 
+.productListingGrid .product-item.one .imagewrapper{
+   width: 25% !important;
+}
+.imagewrapper img {
+  height: auto;
+  width: 100%;
+  margin: 0px 5px;
+  border-radius: 5px;
+}
+.mobile-filter-button{
+  display: none;
+}
+.product-listing-page .sidebar .filterBox h6 button{
+  display: none;
+}
+
+/******** Responsive css  *******/
+
+/***** Min 320px & Max 576px  ******/
+@media (min-width : 320px) and (max-width: 576px){
+.drop-btn button{
+    display: none;
+}
+.productListing{
+  position: relative;
+}
+.sidebar{
+   display: none;
+   width: 0px;
+}
+.sidebar.openSidebar{
+  display: block;
+  width: 100%;
+  left: 0% !important;
+  top: 0% !important;
+  z-index: 99999;
+  background-color: #f7f8fd;
+  position: absolute;
+  padding: 20px !important;
+}
+.product-listing-page .sidebar .filterBox h6 {
+  display: flex;
+  justify-content: space-between;
+}
+.product-listing-page .sidebar .filterBox h6 button{
+  border: none;
+  background-color: #f7f8fd;
+  margin-right: 25%;
+  display: block;
+}
+.product-listing-page .sidebar .filterBox h6 button svg{
+  font-size: 22px;
+}
+.product-listing-page .productListing {
+   gap: 20px; 
+  width: 500px;
+  margin: 0px;
+}
+.productListingGrid .product-item.four {
+  width: 45%;
+}
+.productListingGrid .product-item.three {
+  width: 45%;
+}
+.productListingGrid .product-item.one .imagewrapper{
+  width: 45% !important;
+}
+
+.imagewrapper img {
+  height: 230px !important;
+  width: 100%;
+  margin: 0px 5px;
+  border-radius: 5px;
+}
+
+.mobile-filter-button{
+   display: block;
+   width: 90px;
+}
+.mobile-filter-button button {
+  background-color: red;
+  color: #fff;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+  right: -50%;
+  padding: 8px 10px;
+  font-weight: 600;
+  font-size: 16px !important;
+}
+.range-slider {
+  width: 75% !important;
+}
+
+
+}

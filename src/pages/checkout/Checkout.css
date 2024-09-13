@@ -1,0 +1,52 @@
+
+.checkout-section{
+  padding: 50px 0px;
+}
+
+h2.billing-info{
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+table.table.table-borderless thead tr{
+  border-top: 1px solid rgb(177, 177, 177);
+  border-bottom: 1px solid rgb(177, 177, 177);
+}
+.form-group h2.lavel-data{
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+.MuiFormControl-root.MuiFormControl-fullWidth.MuiTextField-root.custom-width.css-wb57ya-MuiFormControl-root-MuiTextField-root {
+  width: 106% !important;
+}
+.css-1n4twyu-MuiInputBase-input-MuiOutlinedInput-input {
+  background: #f1f1f1 !important;
+}
+.table-bg h4{
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.process-btn button.btn-data{
+  background-color: #ed174a;
+  padding: 10px 12px !important;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  border: none;
+}
+
+td.custom-price{
+  text-align: end;
+  padding-right: 15px !important; 
+}
+.text-bold-data{
+  font-weight: 700;
+}

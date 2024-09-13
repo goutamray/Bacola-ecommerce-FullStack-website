@@ -1,0 +1,38 @@
+.wishlist-section{
+  padding: 40px 0px;
+}
+
+.empty-cart{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+.empty-cart img{
+  width: 150px;
+}
+.empty-cart h2{
+  margin-bottom: 20px;
+}
+.empty-cart a{
+  width: 250px;
+  background-color: red;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.empty-cart a span svg{
+  font-size: 22px;
+}
+
+
+/****** Responsive csss *******/
+@media (min-width : 320px) and (max-width: 576px){
+
+}
+

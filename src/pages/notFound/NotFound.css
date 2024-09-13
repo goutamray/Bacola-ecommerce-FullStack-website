@@ -1,0 +1,15 @@
+.right-content {
+  padding: 80px 0px !important;
+  text-align: center;
+}
+
+.all-error {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.all-error img {
+  width: 400px;
+  margin: auto;
+}
