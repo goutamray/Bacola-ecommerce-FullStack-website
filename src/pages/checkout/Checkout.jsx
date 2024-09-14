@@ -7,10 +7,13 @@ import { createOrderData, fetchCartDataFromApi } from '../../utils/api';
 import createToast from '../../utils/toastify';
 
 import "./Checkout.css"; 
+import { useNavigate } from 'react-router-dom';
 
 const Checkout = () => {
   const [cartData, setCartData] = useState([]); 
-
+  
+  const navigate = useNavigate(); 
+  
    const [input, setInput] = useState({
     name : "",
     email : "",
@@ -62,6 +65,8 @@ const Checkout = () => {
       // order create 
       createOrderData("/create", input).then((res) => {
         createToast("Your Order Successfully Done", "success");
+
+        navigate("/thank-you")
       })
 
       // empty input
@@ -81,11 +86,12 @@ const Checkout = () => {
 
   return (
     <>
+
       <section className="checkout-section">
         <div className="container">
           <form onSubmit={handleCheckOutSubmit}> 
             <div className="row">
-              <div className="col-md-8">
+              <div className="col-md-8 checkout-left">
                 <div className="card p-3"> 
                     <h2 className='billing-info'> Billings Details </h2>
 
@@ -222,14 +228,14 @@ const Checkout = () => {
                     </div>
                 </div>
               </div>
-              <div className="col-md-4">
+              <div className="col-md-4 checkout-right">
                  <div className="card p-4 table-bg">
                    <h4> Your Order </h4>
                    <table className='table table-borderless'>
                      <thead> 
                         <tr>
                           <th> Product </th>
-                          <th> Subtotal </th>
+                          <th className='text-end'> Subtotal </th>
                         </tr>
                      </thead>
                      <tbody>

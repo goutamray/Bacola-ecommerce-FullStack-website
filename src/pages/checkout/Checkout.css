@@ -2,7 +2,6 @@
 .checkout-section{
   padding: 50px 0px;
 }
-
 h2.billing-info{
   font-size: 18px;
   font-weight: 600;
@@ -50,3 +49,18 @@ td.custom-price{
 .text-bold-data{
   font-weight: 700;
 }
+
+/***** table css  ******/
+@media (min-width : 576px) and (max-width: 768px){
+  .checkout-left{
+    display: block;
+    width: 100%;
+  }
+  .checkout-right{
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+

@@ -147,7 +147,7 @@ const SideBar = (props) => {
                 </ul>
               </div>
           </div>
-          <div className="image">
+          <div className="image hide">
             <img src={sidebarImg} alt="" />
           </div>
         </div>

@@ -150,6 +150,11 @@
   display: none;
 }
 
+.filters-btn{
+  display: none;
+}
+
+
 /******** Responsive css  *******/
 
 /***** Min 320px & Max 576px  ******/
@@ -160,7 +165,7 @@
 .productListing{
   position: relative;
 }
-.sidebar{
+/* .sidebar{
    display: none;
    width: 0px;
 }
@@ -173,16 +178,40 @@
   background-color: #f7f8fd;
   position: absolute;
   padding: 20px !important;
+} */
+.sidebar{
+  display: none;
+  width: 0px;
+  left: 0px;
+  transition: all ease-in-out 0.3s;
 }
-.product-listing-page .sidebar .filterBox h6 {
-  display: flex;
-  justify-content: space-between;
+.sidebar.openSidebar{
+ display: block;
+ width: 768px !important;
+ max-width: 100%;
+ left: 0px !important;
+ top: 0% !important;
+ z-index: 999999 !important;
+ background-color: #f7f8fd;
+ position: fixed;
+ padding: 20px !important;
+ height: 100% ;
 }
-.product-listing-page .sidebar .filterBox h6 button{
+.image.hide{
+ display: none;
+}
+.product-listing-page .sidebar .filterBox h6 button {
   border: none;
   background-color: #f7f8fd;
   margin-right: 25%;
   display: block;
+  margin-right: 8%;
+  position: relative;
+  top: -20px !important;
+}
+.product-listing-page .sidebar .filterBox h6 {
+  display: flex;
+  justify-content: space-between;
 }
 .product-listing-page .sidebar .filterBox h6 button svg{
   font-size: 22px;
@@ -231,3 +260,61 @@
 
 
 }
+
+
+
+@media (min-width : 576px) and (max-width: 768px) {
+  .product-listing-page .content_right {
+    width: 100%;
+    flex: 0 0 100%;
+}
+  .filters-btn {
+    background:#2bbef9;
+    bottom: 10px;
+    height: auto;
+    left: 0px;
+    padding: 15px;
+    position: fixed;
+    width: 97% !important;
+    z-index: 10000;
+    margin: 0px 10px !important;
+    display: block;
+    font-size: 22px !important;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.productListing{
+  position: relative;
+}
+.sidebar{
+   display: none;
+   width: 0px;
+   left: 0px;
+   transition: all ease-in-out 0.3s;
+}
+.sidebar.openSidebar{
+  display: block;
+  width: 768px !important;
+  max-width: 100%;
+  left: 0px !important;
+  top: 0% !important;
+  z-index: 999999 !important;
+  background-color: #f7f8fd;
+  position: fixed;
+  padding: 20px !important;
+  height: 100% ;
+}
+.image.hide{
+  display: none;
+}
+.productListingGrid {
+  display: flex;
+  gap: 15px !important;
+}
+.productListingGrid .product-item.four {
+  width: 23%;
+}
+
+}
+

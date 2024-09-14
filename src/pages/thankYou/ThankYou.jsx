@@ -1,7 +1,21 @@
 
 
+
+
+import { useEffect, useState } from "react";
 import "./ThankYou.css";
+import { fetchCartDataFromApi } from "../../utils/api";
 const ThankYou = () => {
+  const [cartData, setCartData] = useState([]);  
+
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    fetchCartDataFromApi(`?userId=${user?.userId}`).then((res) => {
+      setCartData(res.cartList); 
+    });
+   }, []); 
+ 
+
   return (
     <>
       <div className="thank-you">
@@ -31,7 +45,13 @@ const ThankYou = () => {
                       <td> 5150 </td>
                       <td> September 4, 2024 </td>
                       <td> developergoutam53@gmail.com </td>
-                      <td> $8.29 </td>
+                      <td>
+                             {
+                                 cartData?.length !== 0
+                                 ? cartData.reduce((total, item) => total + (parseFloat(item?.price) * item.quantity), 0)
+                                 : 0
+                              }   Tk 
+                       </td>
                       <td> Cash on delivery </td>
                     </tr>
                    </tbody>
@@ -52,11 +72,24 @@ const ThankYou = () => {
                 <tbody>
                   <tr>
                     <td> Angies Boomchickapop Sweet & Salty Kettle Corn × 1 </td>
-                    <td>	$3.29</td>
+                    <td>
+                   {
+                            cartData?.length !== 0
+                            ? cartData.reduce((total, item) => total + (parseFloat(item?.price) * item.quantity), 0)
+                            : 0
+                       }  Tk 
+
+                    </td>
                   </tr>
                   <tr>
                     <td> Subtotal:  </td>
-                    <td>	$3.29</td>
+                    <td>	
+                      {
+                            cartData?.length !== 0
+                            ? cartData.reduce((total, item) => total + (parseFloat(item?.price) * item.quantity), 0)
+                            : 0
+                        }  Tk 
+                    </td>
                   </tr>
                   <tr>
                     <td> Shipping: </td>
@@ -68,7 +101,11 @@ const ThankYou = () => {
                   </tr>
                   <tr>
                     <td> Total: </td>
-                    <td>	$3.29</td>
+                    <td>	  {
+                                 cartData?.length !== 0
+                                 ? cartData.reduce((total, item) => total + (parseFloat(item?.price) * item.quantity), 0)
+                                 : 0
+                              } Tk  </td>
                   </tr>
                 </tbody>
               </table>

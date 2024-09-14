@@ -382,3 +382,24 @@ li.list-inline-item.my-custom-list {
 
 }
 
+
+/***** tablet responsive ******/
+@media (min-width : 576px) and (max-width: 769px){
+  .productDetails h3{
+    margin-top: 20px;
+  }
+  .col-sm-3.details-page-left-part {
+    display: block;
+    width: 50% !important;
+  }
+  .col-sm-9.details-page-right-part{
+    display: block;
+    width: 100% !important;
+  }
+
+
+
+}
+
+
+

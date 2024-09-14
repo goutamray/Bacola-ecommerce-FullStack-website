@@ -191,5 +191,24 @@ span.MuiRating-root.MuiRating-sizeSmall.Mui-readOnly.MuiRating-readOnly.css-1nbs
 
 }
 
+/***** table css  ******/
+@media (min-width : 576px) and (max-width: 768px){
+  .cart-part-left{
+   display: block;
+   width: 100% ;
+  }
+  .cart-part-right{
+    display: block;
+    width: 100% ;
+  }
+  .table-box .image {
+    display: none;
+  } 
 
+  span.MuiRating-root.MuiRating-sizeSmall.Mui-readOnly.MuiRating-readOnly.css-7oy2a2-MuiRating-root {
+    left: 4px;
+    top: 8px;
+}
+
+}
 

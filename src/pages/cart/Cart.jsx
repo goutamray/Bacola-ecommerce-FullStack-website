@@ -45,7 +45,6 @@ const Cart =  () => {
     setChangeQuantity(val); 
   }
 
-
   // select item data 
   const selectedItem = (item, quantityVal) => {
 
@@ -114,7 +113,7 @@ const Cart =  () => {
             </div>
           </div>
           <div className="row my-cart-row ">
-            <div className="col-md-8">
+            <div className="col-md-8 cart-part-left ">
                     {/* cart body start  */}
                     <div className="cart-body">
                       <div className="table-responsive cart-product">
@@ -143,7 +142,7 @@ const Cart =  () => {
                                         </div>
                                         <div className="product-content">
                                         <Link to={item?.productId ? `/product/${item.productId}` : "#"}>
-                                             <h5> {item?.productTitle?.substr(0, 35) + "..."}  </h5> 
+                                             <h5> {item?.productTitle?.substr(0, 30) + "..."}  </h5> 
                                           </Link>  
                                           <Rating name="half-rating" value={item?.rating}  readOnly  size="small" />               
                                         </div>
@@ -177,8 +176,8 @@ const Cart =  () => {
                       </div>
                     </div>
                     <div className="continue-btn mb-3">
-                     <Link to="/"> <span> <FaLongArrowAltLeft /></span> Continue Shopping </Link>
-            </div>
+                       <Link to="/"> <span> <FaLongArrowAltLeft /></span> Continue Shopping </Link>
+                    </div>
                </div>
 
                {/**** cart total part  ******/}

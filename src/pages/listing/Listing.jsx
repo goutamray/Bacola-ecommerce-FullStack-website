@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 // import components 
@@ -26,6 +26,7 @@ import { useEffect } from "react";
 import axios from "axios";
 
 import "./Listing.css";
+import { MyContext } from "../../App";
 
 const Listing = () => {
   const [productView, setProductView ] = useState('four');
@@ -36,6 +37,7 @@ const Listing = () => {
   const open = Boolean(anchorEl);
 
   const [isOpenSideBar, setIsOpenSideBar ] = useState(false); 
+
 
   // open filter 
   const openSideBarData = () => {
@@ -146,6 +148,13 @@ const Listing = () => {
 
   return (
     <>
+
+        <button 
+           className="btn btn-primary w-100 filters-btn mb-2" 
+           onClick={openSideBarData}> 
+           Open Filters 
+        </button>
+
        <div className="bradcrumb py-10">
           <div className="container custom-background ">
             <div className="col">

@@ -239,11 +239,11 @@ const ProductDetails = () => {
     <>
      <div className="productDetails ">
       <div className="container">
-         <div className="row">
-           <div className="col-md-3">
+         <div className="row details-row ">
+           <div className="col-sm-3 details-page-left-part ">
                <ProductZoom images={productData?.photo} discount={productData?.discount}/>
            </div>
-           <div className="col-md-9">
+           <div className="col-sm-9 details-page-right-part ">
 
            <div>
               {loading ? (
