@@ -20,7 +20,7 @@ import { Navigation } from 'swiper/modules';
 
 // images 
 import man from "../../assets/avater/aaaa.jpg"
-import coupon from "../../assets/banner/coupon.png"
+import news from "../../assets/banner/news.png"
 
 import { useContext, useEffect, useState } from "react";
 import { fetchDataFromApi, fetchProductFromApi } from "../../utils/api";
@@ -140,7 +140,7 @@ const Home = () => {
                   <div className="product-header">
                      <div className="populart-text">
                         <h2> Popular Products </h2>
-                        <p> Do not miss the current offers until the end of   March. </p>
+                        {/* <p> Do not miss the current offers until the end of   March. </p> */}
                     </div>
                     <Tabs
                         value={selectedCategory}
@@ -205,7 +205,7 @@ const Home = () => {
                   <div className="product-header">
                      <div>
                         <h2> NEW PRODUCTS </h2>
-                        <p> New products with updated stocks. </p>
+                        {/* <p> New products with updated stocks. </p> */}
                     </div>
                   
                   </div>
@@ -284,7 +284,7 @@ const Home = () => {
                </div>
                <div className="col-sm-6">
                   <div className="newsleter-image">
-                     <img src={coupon} alt="" />
+                     <img src={news} alt="" />
                   </div>
                </div>
             </div>

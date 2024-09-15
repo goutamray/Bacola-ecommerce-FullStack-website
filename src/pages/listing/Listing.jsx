@@ -26,7 +26,6 @@ import { useEffect } from "react";
 import axios from "axios";
 
 import "./Listing.css";
-import { MyContext } from "../../App";
 
 const Listing = () => {
   const [productView, setProductView ] = useState('four');
@@ -145,6 +144,9 @@ const Listing = () => {
     }
   }
   
+  useEffect(() => {
+     window.scrollTo(0,0); 
+  }, []); 
 
   return (
     <>

@@ -44,12 +44,6 @@ const Navigation = () => {
 
                    <div className="main-menu">
                       <ul className="list list-inline">
-                        <li className="list-inline-item custom-icon "> 
-                          <Link to="/">         
-                               Home 
-                           </Link>
-                        </li>
-
                         {
                             context.categoryData?.categoryList?.length !== 0 &&
                             context.categoryData?.categoryList?.map((item, index) => {

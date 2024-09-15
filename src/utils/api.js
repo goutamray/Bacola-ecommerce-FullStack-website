@@ -540,4 +540,19 @@ export const fetchSearchProductData = async(url) => {
    }
 };
 
+/**
+ * Create message data
+ * @param {string} url - The endpoint URL (e.g., "/create")
+ * @param {FormData} formData - The form data to submit
+ * @returns {Promise<Object>} - The response data from the server
+ */
+export const postMessageData = async(url, formData) => {
+   try {
+      const response = await axios.post(`http://localhost:5050/api/v1/message${url}`, formData); 
+      return response.data;
+   } catch (error) {
+      console.error('Error submitting form data:', error.message);
+      throw error; 
+   }
+};
 

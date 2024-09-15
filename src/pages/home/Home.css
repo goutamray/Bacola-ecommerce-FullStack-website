@@ -338,17 +338,17 @@ img.rounded.my-custom-size {
   margin-bottom: 10px;
 }
 .cat-slider .mySwiper-data{
-  overflow: inherit !important;
+  overflow: hidden;
 }
-.cat-slider .swiper-button-prev, .cat-slider .swiper-button-next {
+/* .cat-slider .swiper-button-prev, .cat-slider .swiper-button-next {
   top: -45px !important;
   height: 30px;
   width: 30px;
-}
-.cat-slider .swiper-button-prev{
+} */
+/* .cat-slider .swiper-button-prev{
   right: 70px;
   left: inherit !important;
-}
+} */
 .cat-slider .swiper-button-prev:after, .cat-slider .swiper-button-next:after {
   font-size: 12px !important;
 }
@@ -465,14 +465,13 @@ img.rounded.my-custom-size {
   display: flex;
   align-items: center;
   flex-direction: row;
-}
-.newsleter-image{
-  position: relative;
+  justify-content: flex-end;
 }
 .newsleter-image img{
-  position: absolute;
-  top: -68px;
-  right: 0px;
+  top: 20px;
+  width: 500px;
+  position: relative;
+  left: 15%;
 }
 .newleter-content{
   padding-top: 80px;
@@ -647,10 +646,6 @@ img.rounded.my-custom-size {
 }
 .news-btn button {
   right: -26%;
-}
-.newsleter-image img {
-  top: 12px;
-  right: -47px;
 }
 
 

@@ -9,6 +9,7 @@ import 'swiper/css/navigation';
 // import required modules
 import { useEffect, useState } from 'react';
 import { Navigation, Autoplay } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 
 const CategorySlider = ({ catData }) => {
   const [categoryData, setCategoryData ] = useState([]);
@@ -59,10 +60,12 @@ const CategorySlider = ({ catData }) => {
                         {
                           categoryData.length !== 0 &&  categoryData?.map((item, index) => {
                              return <SwiperSlide key={index} >
+                             <Link to={`/category/${item?._id}`}> 
                                 <div className="item" style={{ background : item.color}}>
                                    <img src={item.photo} alt="" />
                                    <h6 className='text-center'> {item.name}</h6>
                                 </div>
+                            </Link>
                             </SwiperSlide>
                             })
                         }
