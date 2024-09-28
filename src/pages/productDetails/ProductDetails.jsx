@@ -47,7 +47,7 @@ const ProductDetails = () => {
   const [tabError, setTabError] = useState(false);
 
  const [reviewsData, setReviewsData] = useState([]);
-  const [rating, setRating] = useState(0)
+ const [rating, setRating] = useState(0)
 
   const [input, setInput ] = useState({
       productId : "",
@@ -279,7 +279,13 @@ const ProductDetails = () => {
                             {
                               productData?.productRams?.map((item, index) => {      
                                 return <li className='list-inline-item' key={index}> 
-                                <a href="#" className={`tag ${activeSize === index ? "active" : ""}`} onClick={() => isActive(index)} > {item} </a>
+                                   <a 
+                                     href="#" 
+                                     className={`tag ${activeSize === index ? "active" : ""}`} 
+                                     onClick={() => isActive(index)} 
+                                     > 
+                                     {item} 
+                                  </a>
                              </li>
                               })
                             }                
@@ -297,7 +303,13 @@ const ProductDetails = () => {
                             {
                               productData?.productSize?.map((item, index) => {
                                 return <li className='list-inline-item' key={index}> 
-                                <a href="#" className={`tag ${activeSize === index ? "active" : ""}`} onClick={() => isActive(index)} > {item} </a>
+                                     <a 
+                                        href="#" 
+                                        className={`tag ${activeSize === index ? "active" : ""}`} 
+                                        onClick={() => isActive(index)} 
+                                       > 
+                                       {item} 
+                                     </a>
                              </li>
                               })
                             }                
@@ -314,7 +326,13 @@ const ProductDetails = () => {
                             {
                               productData?.productWeight?.map((item, index) => {
                                 return <li className='list-inline-item' key={index}> 
-                                <a href="#" className={`tag ${activeSize === index ? "active" : ""}`} onClick={() => isActive(index)} > {item} </a>
+                                     <a 
+                                       href="#" 
+                                       className={`tag ${activeSize === index ? "active" : ""}`} 
+                                       onClick={() => isActive(index)} 
+                                      > 
+                                      {item} 
+                                    </a>
                              </li>
                               })
                             }                
@@ -490,7 +508,7 @@ const ProductDetails = () => {
                                 <div className="customer-review-info ">
                                     <div className="card-info">
                                       <div className="review-date">
-                                        <p className="now-date"> {item?.createdAt} </p>
+                                        <p className="now-date"> {item?.createdAt?.split("T")[0]}  </p>
                                         </div>
                                         <div className="star-message mt-3"> 
                                           <p className="message"> {item?.review} </p>

@@ -188,13 +188,13 @@ const Home = () => {
                       className="mySwiper"
                     >
                      {
-                        products?.length !== 0 && 
+                        products?.length !== 0 ? 
                         products?.map((item, index) => {
                           return <SwiperSlide key={index}>
                           <ProductItem item={item}/>
                        </SwiperSlide>
-                        })
-                     }     
+                        }) : <p> No Products Found</p>
+                     }      
                     </Swiper> 
                           
                   </div> 

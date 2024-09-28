@@ -10,10 +10,17 @@ import CircularProgress from '@mui/material/CircularProgress';
 import TextField from '@mui/material/TextField'; 
 import { Link, useNavigate } from "react-router-dom";
 
-import "./SignIn.css"; 
 import createToast from "../../utils/toastify";
-import {  createNewUser } from "../../utils/api";
+import {  createNewUser, loginGoogleUserData } from "../../utils/api";
 
+
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { firebaseApp } from "../../firebase/firebase";
+
+const auth = getAuth(firebaseApp); 
+const provider = new GoogleAuthProvider();
+
+import "./SignIn.css"; 
 
 const SignIn = () => {
   const [input, setInput] = useState({
@@ -84,6 +91,58 @@ const SignIn = () => {
     };
 
 
+  // handle google login 
+  const signInWithGoogle = async () => {
+    signInWithPopup(auth, provider)
+    .then((result) => {
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      const token = credential.accessToken;
+      const user = result.user;
+      
+      const data = {
+        name : user.providerData[0].displayName,
+        email: user.providerData[0].email,
+        password : null,
+        photo : user.providerData[0].photoURL,
+        phone : user.providerData[0].phoneNumber,
+        isAdmin : false,
+      }
+     
+      loginGoogleUserData("/authwithgoogle", data).then((res) => {
+        try {
+           if (res.error !== true) {
+             localStorage.setItem("token", res.token);
+             const user = {
+              name : res?.user?.name,
+              email : res?.user?.email,
+              userId : res?.user?.id
+             };
+            localStorage.setItem("user" , JSON.stringify(user));
+            createToast("User Login Successfull", "success");
+            setTimeout(() => {
+              navigate("/");
+              context.isLogin(true);
+              setLoading(false);
+            }, 2000);
+
+           }else{
+            setLoading(false);
+           }
+        } catch (error) {
+           console.log(error.message);
+           setLoading(false);
+        }
+
+      })
+      
+
+    }).catch((error) => {
+      const email = error.customData.email;
+      const credential = GoogleAuthProvider.credentialFromError(error);
+    });
+  }
+
+
 
   useEffect(() => {
     context.setIsHeaderFooterShow(false); 
@@ -147,7 +206,7 @@ const SignIn = () => {
                         <div className="text-center mt-3 text-black">
                           <p> Or continue with social account </p>
                         </div>
-                        <button className="google-btn" >
+                        <button className="google-btn" onClick={signInWithGoogle}>
                           <img src={google} alt="google" />
                           <span>  Sign In with Google </span>
                         </button>

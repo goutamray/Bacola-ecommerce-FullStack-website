@@ -40,9 +40,13 @@ const QuantityBox = (props) => {
 
   return (
     <div className="quantityDrop d-flex align-items-center">
-      <button onClick={minus}><FaMinus /></button>
+      <button onClick={minus}> 
+        <FaMinus />
+      </button>
       <input type="text" value={inputVal} onChange={handleInputChange} />
-      <button onClick={plus}><FaPlus /></button>
+      <button onClick={plus}>
+        <FaPlus />
+      </button>
     </div>
   );
 };

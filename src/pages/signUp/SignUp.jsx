@@ -52,8 +52,6 @@ const SignUp = () => {
       // Create user
       createNewUser("/signup", input)
         .then((res) => {
-          console.log(res);
-          
           setLoading(false); 
           createToast("User Register Successful", "success");
           

@@ -68,25 +68,7 @@ const RelatedProduct = ( { title, relatedProducts }) => {
                           }
                       
 
-                          {/* <SwiperSlide>
-                             <ProductItem />
-                          </SwiperSlide>
-
-                          <SwiperSlide>
-                             <ProductItem />
-                          </SwiperSlide>
-
-                          <SwiperSlide>
-                             <ProductItem />
-                          </SwiperSlide>
-
-                          <SwiperSlide>
-                             <ProductItem />
-                          </SwiperSlide>
-
-                          <SwiperSlide>
-                             <ProductItem />
-                          </SwiperSlide> */}
+                  
                     </Swiper>
                           
                   </div>

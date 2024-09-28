@@ -8,6 +8,7 @@ import Rating from '@mui/material/Rating';
 // range slider 
 import RangeSlider from "react-range-slider-input";
 import "react-range-slider-input/dist/style.css";
+
 import { useState } from 'react';
 
 import sidebarImg from "../../assets/banner/sidebar.png"
@@ -56,6 +57,10 @@ const SideBar = (props) => {
       props.filterByRating(newRating, categoryId); // Pass the selected rating and current category ID
       props.openSideBarData(); 
     }; 
+
+
+
+    
 
   return (
     <>

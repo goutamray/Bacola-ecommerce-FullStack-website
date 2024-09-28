@@ -33,12 +33,12 @@ import WishList from './pages/wishlist/WishList';
 import Checkout from './pages/checkout/Checkout';
 import ThankYou from './pages/thankYou/ThankYou';
 import Search from './pages/search/Search';
+import OrderTruck from './pages/orderTruck/OrderTruck';
 
 // context 
 const MyContext = createContext();
 
 import './App.css';
-import OrderTruck from './pages/orderTruck/OrderTruck';
 
 function App() {
   const [countryList , setCountryList ] = useState([]);
@@ -95,8 +95,8 @@ function App() {
      })
   }
 
-    // login & logout 
-    useEffect(() => {
+  // login & logout 
+  useEffect(() => {
       const token = localStorage.getItem("token");
   
       if (token) {

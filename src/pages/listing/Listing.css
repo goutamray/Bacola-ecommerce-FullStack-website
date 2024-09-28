@@ -165,20 +165,6 @@
 .productListing{
   position: relative;
 }
-/* .sidebar{
-   display: none;
-   width: 0px;
-}
-.sidebar.openSidebar{
-  display: block;
-  width: 100%;
-  left: 0% !important;
-  top: 0% !important;
-  z-index: 99999;
-  background-color: #f7f8fd;
-  position: absolute;
-  padding: 20px !important;
-} */
 .sidebar{
   display: none;
   width: 0px;
