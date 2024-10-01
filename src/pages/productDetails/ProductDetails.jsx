@@ -21,7 +21,7 @@ import { FaTelegram } from "react-icons/fa";
 
 import { useContext, useState } from "react";
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
 import avaterPhoto from "../../assets/banner/avater-photo.jpg"
@@ -65,7 +65,8 @@ const ProductDetails = () => {
   }))
  }; 
 
-  const context = useContext(MyContext)
+  const context = useContext(MyContext);
+  const navigate = useNavigate();
 
   // Function to handle active size selection
   const isActive = (index) => {
@@ -139,7 +140,11 @@ const ProductDetails = () => {
       cartFields.productId = productData?._id
       cartFields.userId = user?.userId
   
-      context.addToCart(cartFields);
+      context?.addToCart(cartFields);
+
+      setTimeout(() => {
+        navigate("/cart")
+      }, 2000);
     }else{
       setTabError(true); 
     }
@@ -156,6 +161,7 @@ const ProductDetails = () => {
      input.customerId = user?.userId;
      input.productId = id;
      input.customerName = user?.name;
+     input.customerPhoto = user?.photo; 
 
        // Validate all inputs 
        if (!input.review || !input.customerRating) {
@@ -356,12 +362,12 @@ const ProductDetails = () => {
                           </div>
                            <div className="wish-compare-btn">
                              <Tooltip title="Add To WishList" placement="top-start">
-                                <Button onClick={() => addToWishList(productData?._id)}> 
+                                <Button className="my-wish-btn" onClick={() => addToWishList(productData?._id)}> 
                                   <CiHeart /> 
                                 </Button>   
                               </Tooltip>
                              <Tooltip title="Add To Compare " placement="top-start">
-                                <Button> <FaCodeCompare /> </Button>   
+                                <Button className="my-wish-btn" > <FaCodeCompare /> </Button>   
                               </Tooltip>
                           </div>
                   
@@ -498,10 +504,23 @@ const ProductDetails = () => {
                             {
                               reviewsData?.length !== 0 && 
                               reviewsData?.slice(0)?.reverse()?.map((item, index) => {
+
+                                const localUser = JSON.parse(localStorage.getItem("user"));
+                                const localUserPhoto = localUser?.photo;
+
                                 return  <div className="card p-3 review-card mb-4" key={index}>
                                 <div className="image-item">
                                   <div className="rounded-circle">
-                                      <img src={avaterPhoto} alt="" />
+                                  <img
+                                        src={
+                                          localUserPhoto && localUser?.userId === item?.customerId
+                                          ? localUserPhoto // Show localStorage photo if it belongs to the current user
+                                          : item?.customerPhoto || avaterPhoto
+                                            }
+                                          alt={item?.customerName}
+                                          className="review-image"
+                                        />
+                                     
                                    </div>
                                    <p> {item?.customerName} </p>
                                 </div>

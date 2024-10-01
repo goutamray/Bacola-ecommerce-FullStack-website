@@ -55,8 +55,6 @@ const Header = ( ) => {
    setOpenSearch(() => !openSearch)
   }
 
-
-
    //user logout 
    const handleLogout = () => {
       localStorage.clear();
@@ -72,12 +70,12 @@ const Header = ( ) => {
       const token = localStorage.getItem("token");
    
       if (token) {
-        context.setIsLogin(true); 
+        context?.setIsLogin(true); 
         const userData = JSON.parse(localStorage.getItem("user"));
-        context.setUser(userData); 
+        context?.setUser(userData); 
       } else {
-        context.setIsLogin(false); 
-        context.setUser({
+        context?.setIsLogin(false); 
+        context?.setUser({
           name: "",
           email: "",
           userId: ""
@@ -248,7 +246,7 @@ const Header = ( ) => {
                              <button> <BsMinecartLoaded /> </button>    
                              <div className="total-count">
                                  <span>      
-                                   { context.cartData?.length }
+                                   { context?.cartData?.length }
                                 </span>
                              </div>
                         </Link>

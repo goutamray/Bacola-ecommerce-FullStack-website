@@ -12,7 +12,6 @@ import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
 import ProductModal from './components/productModal/ProductModal';
 
-
 import About from './pages/about/About';
 import Cart from './pages/cart/Cart';
 
@@ -22,18 +21,18 @@ import ProductDetails from './pages/productDetails/ProductDetails';
 import SignIn from './pages/signIn/SignIn';
 import SignUp from './pages/signUp/SignUp';
 
-
-import Order from './pages/order/Order';
-import NotFound from './pages/notFound/NotFound';
-import { createCartData, fetchCartDataFromApi, fetchDataFromApi, fetchProductFromApi } from './utils/api';
-
-import { ToastContainer } from 'react-toastify';
-import createToast from './utils/toastify';
 import WishList from './pages/wishlist/WishList';
 import Checkout from './pages/checkout/Checkout';
 import ThankYou from './pages/thankYou/ThankYou';
 import Search from './pages/search/Search';
 import OrderTruck from './pages/orderTruck/OrderTruck';
+
+import Order from './pages/order/Order';
+import NotFound from './pages/notFound/NotFound';
+
+import { createCartData, fetchCartDataFromApi, fetchDataFromApi, fetchProductFromApi } from './utils/api';
+import { ToastContainer } from 'react-toastify';
+import createToast from './utils/toastify';
 
 // context 
 const MyContext = createContext();

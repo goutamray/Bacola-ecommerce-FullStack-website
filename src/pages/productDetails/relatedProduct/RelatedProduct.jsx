@@ -51,7 +51,7 @@ const RelatedProduct = ( { title, relatedProducts }) => {
                             },
                             1024: {
                               slidesPerView: 5,
-                              spaceBetween: 50,
+                              spaceBetween: 30,
                             },
                           }}
                           navigation={true}

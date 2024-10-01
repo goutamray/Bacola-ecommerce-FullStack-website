@@ -91,7 +91,8 @@ const WishList = () => {
                             </thead>
                             <tbody>   
                               {
-                                myListData?.length !== 0 && myListData?.map((item, index) => {
+                                 myListData?.length !== 0 &&
+                                 myListData?.map((item, index) => {
                                   return <tr key={index}>
                                   <td> 
                                     <div className="table-box d-flex align-items-center">

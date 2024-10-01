@@ -38,8 +38,6 @@ const SearchBox = ( { hanleOpenSearch }) => {
     })
   }
 
-
-
   return (
     <>
           <div className="header-search">
@@ -49,11 +47,11 @@ const SearchBox = ( { hanleOpenSearch }) => {
                    onClick={searchProducts}
                 > 
 
-              {
-                loading === true ?   
-                <CircularProgress color="inherit" className="ml-3 loader "/> 
-                : <IoIosSearch /> 
-              }
+                  {
+                    loading === true ?   
+                    <CircularProgress color="inherit" className="ml-3 loader "/> 
+                    : <IoIosSearch /> 
+                  }
                   
                 </button>
           </div>

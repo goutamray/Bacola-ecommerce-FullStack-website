@@ -10,6 +10,11 @@ import { MyContext } from "../../../App";
 
 const Navigation = () => {
   const [isOpenSideNav, setIsOpemSideNav ] = useState(false); 
+
+
+  const handleOpenHide = () => {
+    setIsOpemSideNav(() => !isOpenSideNav)
+  }
   
   const context = useContext(MyContext); 
   
@@ -20,7 +25,7 @@ const Navigation = () => {
              <div className="row my-custom-row">
                  <div className="col-sm-3 bottom-footer-part">
                      <div className="category-tab">
-                       <button onClick={() => setIsOpemSideNav(!isOpenSideNav)}> 
+                       <button onClick={handleOpenHide}> 
                             <span className="menu"> <IoMenu /> </span>
                             <span> ALL CATEGORIES  </span>
                             <span className="angle"> <FaAngleDown /> </span>
@@ -31,7 +36,7 @@ const Navigation = () => {
                           {
                              context.categoryData?.categoryList?.length !== 0 &&
                              context.categoryData?.categoryList?.map((item, index) => {
-                              return  <li key={index} > 
+                              return  <li key={index} onClick={handleOpenHide} > 
                                        <Link to={`/category/${item?._id}`}> {item?.name} </Link>
                                         </li>
                             })

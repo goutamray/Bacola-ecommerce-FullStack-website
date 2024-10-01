@@ -141,6 +141,19 @@ const handleUserUpdate = (e) => {
       .then((res) => {
         setIsLoading(false);
         createToast("User updated successfully!", "success");
+
+
+          // Update the user information in localStorage
+          const updatedUser = {
+                ...user,
+                name: res.user?.name,
+                email: res.user?.email,
+                phone: res.user?.phone,
+                photo: res.user?.photo || input.previewPhoto, // Use the updated photo URL or the preview photo
+              };
+          
+            // Store the updated user data in localStorage
+            localStorage.setItem("user", JSON.stringify(updatedUser));
       })
   } else {
     setIsLoading(false);
@@ -247,7 +260,7 @@ const handlePasswordSubmit = (e) => {
                                         </div>
                                     </div>
                               </div>
-                             <div className="col-md-7">
+                             <div className="col-md-7 mobile-bottom ">
                                 <div className="row">
                                 <div className="col-md-6">
                                      <div className="form-group">
@@ -262,7 +275,7 @@ const handlePasswordSubmit = (e) => {
                                           />
                                      </div>
                                     </div>
-                                   <div className="col-md-6">
+                                   <div className="col-md-6 mobile-top">
                                      <div className="form-group">
                                         <TextField 
                                             fullWidth 
@@ -278,7 +291,7 @@ const handlePasswordSubmit = (e) => {
                                    </div>
                                   </div>
                                 <div className="row">
-                                   <div className="col-md-12">
+                                   <div className="col-md-12 ">
                                      <div className="form-group mt-2">
                                         <TextField 
                                             fullWidth 
@@ -328,7 +341,7 @@ const handlePasswordSubmit = (e) => {
                                           />
                                      </div>
                                     </div>
-                                   <div className="col-md-4">
+                                   <div className="col-md-4 mobile-top">
                                      <div className="form-group">
                                         <TextField 
                                             fullWidth  
@@ -341,7 +354,7 @@ const handlePasswordSubmit = (e) => {
                                           />
                                      </div>
                                    </div>
-                                   <div className="col-md-4">
+                                   <div className="col-md-4 mobile-top">
                                      <div className="form-group">
                                         <TextField 
                                             fullWidth 

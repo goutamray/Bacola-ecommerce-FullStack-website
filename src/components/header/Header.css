@@ -748,11 +748,15 @@ button.mobile-search-box {
   transition: all ease-in-out 0.3s;
 }
 .main-menu-phone.open{
-  right: 10px;
+  right: 0px;
   height: 720px;
   opacity: 1;
   visibility: visible;
 } 
+.main-menu-phone.open ul li{
+  padding-left: 20px !important;
+  padding-bottom: 5px;
+}
 .second-bar {
   padding: 0px;
 }

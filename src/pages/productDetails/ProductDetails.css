@@ -103,19 +103,15 @@
   gap: 10px;
   padding-left: 20px;
 }
-.wish-compare-btn button.MuiButtonBase-root{
-   border: 1px solid rgb(208, 208, 208);
-   border-radius: 50%;
-   text-transform: uppercase;
-   color: #000;
-   font-family: var(--font-secondary);
-   font-size: 14px;
-   height: 40px !important;
-   width: 40px !important;
-   max-width: 40px !important;
+button.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButton-colorPrimary.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.MuiButton-colorPrimary.my-wish-btn.css-1apkmlw-MuiButtonBase-root-MuiButton-root {
+  border: 1px solid #cfc1c1;
+  width: 40px !important;
+  padding: 6px !important;
+  max-width: 30px !important;
 }
+
 .wish-compare-btn button.MuiButtonBase-root svg{
-  font-size: 20px;
+  font-size: 25px !important;
 }
 .wish-compare-btn .css-1e6y48t-MuiButtonBase-root-MuiButton-root {
    min-width: 0px;
@@ -216,6 +212,7 @@
 .review-card .card-info {
   width: 73%;
 }
+
 .review-card .card-info .review-date{
   color: #B6B6B6;
   font-size: 13px;
@@ -228,11 +225,12 @@
   margin-top: 7px;
 }
 .review-card .review-final{
-  width: 17%;
+  width: 17% !important;
 }
-.customer-review-info{
+.customer-review-info {
   display: flex;
-  justify-content: space-between;
+  width: 85% !important;
+  justify-content: space-between !important;
 }
 .css-1qqgbpl-MuiRating-root {
   position: relative;
