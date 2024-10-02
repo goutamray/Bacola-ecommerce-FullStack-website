@@ -1,7 +1,4 @@
 
-
-
-
 import { useEffect, useState } from "react";
 import "./ThankYou.css";
 import { fetchCartDataFromApi } from "../../utils/api";
@@ -9,11 +6,10 @@ const ThankYou = () => {
   const [cartData, setCartData] = useState([]);  
 
   useEffect(() => {
-    const user = JSON.parse(localStorage.getItem("user"));
-    fetchCartDataFromApi(`?userId=${user?.userId}`).then((res) => {
+    fetchCartDataFromApi("/").then((res) => {
       setCartData(res.cartList); 
     });
-   }, []); 
+   }, []);
  
 
   return (

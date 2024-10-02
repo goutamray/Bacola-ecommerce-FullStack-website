@@ -36,11 +36,10 @@ const Checkout = () => {
 
 
    useEffect(() => {
-    const user = JSON.parse(localStorage.getItem("user"));
-    fetchCartDataFromApi(`?userId=${user?.userId}`).then((res) => {
+    fetchCartDataFromApi("/").then((res) => {
       setCartData(res.cartList); 
     });
-   }, []); 
+   }, []);
  
 
   // handleCheckOutSubmit
