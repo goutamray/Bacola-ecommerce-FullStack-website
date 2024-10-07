@@ -109,7 +109,7 @@
 /***** Responsive css *******/
 @media (min-width : 320px) and (max-width: 768px){
 .about-section{
-    height: 350px !important;
+  height: 350px !important;
 }
 .about-text h2{
  font-size: 35px;
@@ -131,7 +131,6 @@
 .bottom-content p {
   opacity: 0;
   visibility: hidden;
-
 }
 
 }

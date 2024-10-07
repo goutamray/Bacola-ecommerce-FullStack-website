@@ -70,7 +70,7 @@ const Search = () => {
   // Fetch products when the component mounts or the 'id' parameter changes
   useEffect(() => {
     fetchProducts();
-  }, [context.searchData]);
+  }, [context?.searchData]);
 
 
   // filter category by sidebar content 

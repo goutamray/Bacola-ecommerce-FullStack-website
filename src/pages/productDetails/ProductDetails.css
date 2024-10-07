@@ -109,7 +109,6 @@ button.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textPrimary.Mu
   padding: 6px !important;
   max-width: 30px !important;
 }
-
 .wish-compare-btn button.MuiButtonBase-root svg{
   font-size: 25px !important;
 }
@@ -117,7 +116,6 @@ button.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textPrimary.Mu
    min-width: 0px;
    padding: 0px;
 }
-
 .follow-us-btn{
   display: flex;
   gap: 10px;
@@ -175,10 +173,10 @@ button.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textPrimary.Mu
 
 /********* review all details css ********/
 .review-customer h4{
-   color: #2A2A2A;
-   font-size: 18px;
-   font-weight: 600;
-   margin-bottom: 20px;
+  color: #2A2A2A;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 .review-card{
    display: flex;
@@ -203,16 +201,15 @@ button.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textPrimary.Mu
   object-fit: cover;
 }
 .review-card .image-item p{
-    font-size: 14px;
-    font-weight: 600;
-    margin-left: 15px;
-    color: #B6B6B6;
-    margin-top: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 15px;
+  color: #B6B6B6;
+  margin-top: 4px;
 }
 .review-card .card-info {
   width: 73%;
 }
-
 .review-card .card-info .review-date{
   color: #B6B6B6;
   font-size: 13px;
@@ -269,9 +266,9 @@ button.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textPrimary.Mu
   margin-top: 50px;
 }
 .review-form h3{
-   font-size: 23px;
-   font-weight: 600;
-   color: #253D4E;
+  font-size: 23px;
+  font-weight: 600;
+  color: #253D4E;
 }
 .review-form .form {
   margin-top: 20px !important;
@@ -297,11 +294,11 @@ button.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textPrimary.Mu
   gap: 5px;
   margin-top: 20px;
 } 
- .progress-bar-item .single-progress span{
-   font-size: 12px;
-   color: #7E7E7E;
-   font-weight: 400;
-   width: 42px;
+.progress-bar-item .single-progress span{
+  font-size: 12px;
+  color: #7E7E7E;
+  font-weight: 400;
+  width: 42px;
 } 
  .progress-bar-item .single-progress .progress .progress-bar{
    background-color: var(--primary-color);
@@ -383,19 +380,17 @@ li.list-inline-item.my-custom-list {
 
 /***** tablet responsive ******/
 @media (min-width : 576px) and (max-width: 769px){
-  .productDetails h3{
-    margin-top: 20px;
-  }
-  .col-sm-3.details-page-left-part {
-    display: block;
-    width: 50% !important;
-  }
-  .col-sm-9.details-page-right-part{
-    display: block;
-    width: 100% !important;
-  }
-
-
+.productDetails h3{
+  margin-top: 20px;
+}
+.col-sm-3.details-page-left-part {
+  display: block;
+  width: 50% !important;
+}
+.col-sm-9.details-page-right-part{
+  display: block;
+  width: 100% !important;
+}
 
 }
 

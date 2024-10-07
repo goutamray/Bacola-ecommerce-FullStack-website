@@ -37,8 +37,8 @@ const Navigation = () => {
                              context.categoryData?.categoryList?.length !== 0 &&
                              context.categoryData?.categoryList?.map((item, index) => {
                               return  <li key={index} onClick={handleOpenHide} > 
-                                       <Link to={`/category/${item?._id}`}> {item?.name} </Link>
-                                        </li>
+                                 <Link to={`/category/${item?._id}`}> {item?.name} </Link>
+                                </li>
                             })
                           }
                            </ul>

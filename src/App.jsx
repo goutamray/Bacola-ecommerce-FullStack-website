@@ -61,8 +61,8 @@ function App() {
 
   const [addingCart, setAddingCart] = useState(false); 
 
-   const [cartData, setCartData ] = useState();
-   const [searchData, setSearchData] = useState([]); 
+  const [cartData, setCartData ] = useState();
+  const [searchData, setSearchData] = useState([]); 
 
 
  // get all countries
@@ -223,13 +223,9 @@ function App() {
                   <Route  path='/signUp' exact={true} element={ <SignUp /> }/>
                   <Route  path='/thank-you' exact={true} element={ <ThankYou /> }/>
                   <Route  path='*' exact={true} element={ <NotFound /> }/>
-
-             
                   <Route  path='/my-account' exact={true} element={ <MyAccount /> } />
-                   
                   <Route path='orders' exact={true} element={<Order />}/>
                    
-               
               </Routes>
 
             {/* footer part  */}
@@ -250,6 +246,7 @@ function App() {
 }
 
 export default App
+
 export { MyContext };
 
 

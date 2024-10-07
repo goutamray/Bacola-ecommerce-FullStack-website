@@ -79,16 +79,14 @@
 
 /***** Responsive css  *******/
 
-
-
 /***** Min 320px & Max 576px  ******/
 @media (min-width : 320px) and (max-width: 768px){
 .contact-text p{
-    width: 90% !important;
-  }
+  width: 90% !important;
+}
 .contact-part {
-    margin: 6px 8px;
-    text-align: center;
+  margin: 6px 8px;
+  text-align: center;
 }
 .form-text p{
   width: 95%;

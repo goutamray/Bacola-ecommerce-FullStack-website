@@ -192,9 +192,6 @@ const Header = ( ) => {
                             </div>
                       }
              
-
-                   
-
                     {/* cart section */}
                     <div className="cart-section">
                         <div className="user">

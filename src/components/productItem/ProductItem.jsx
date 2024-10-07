@@ -62,14 +62,11 @@ const ProductItem = (props) => {
     }else{
       createToast("Please Login Your Account");
     }
-
-   
-
   }
 
   return (
     <>
-       <div className={`item product-item ${props.itemView} `}>
+       <div className={`item product-item ${props?.itemView} `}>
             <div className="imagewrapper">
                   <img src={props?.item?.photo[0]} alt="product" />
                     <div className="discount">

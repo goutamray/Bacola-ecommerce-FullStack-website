@@ -85,7 +85,6 @@ const Checkout = () => {
 
   return (
     <>
-
       <section className="checkout-section">
         <div className="container">
           <form onSubmit={handleCheckOutSubmit}> 

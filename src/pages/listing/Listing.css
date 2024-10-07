@@ -216,17 +216,15 @@
 .productListingGrid .product-item.one .imagewrapper{
   width: 45% !important;
 }
-
 .imagewrapper img {
   height: 230px !important;
   width: 100%;
   margin: 0px 5px;
   border-radius: 5px;
 }
-
 .mobile-filter-button{
-   display: block;
-   width: 90px;
+  display: block;
+ width: 90px;
 }
 .mobile-filter-button button {
   background-color: red;
@@ -244,40 +242,38 @@
   width: 75% !important;
 }
 
-
 }
 
 
 
 @media (min-width : 576px) and (max-width: 768px) {
-  .product-listing-page .content_right {
-    width: 100%;
-    flex: 0 0 100%;
+.product-listing-page .content_right {
+  width: 100%;
+  flex: 0 0 100%;
 }
-  .filters-btn {
-    background:#2bbef9;
-    bottom: 10px;
-    height: auto;
-    left: 0px;
-    padding: 15px;
-    position: fixed;
-    width: 97% !important;
-    z-index: 10000;
-    margin: 0px 10px !important;
-    display: block;
-    font-size: 22px !important;
-    font-weight: 600;
-    text-transform: uppercase;
+.filters-btn {
+  background:#2bbef9;
+  bottom: 10px;
+  height: auto;
+  left: 0px;
+  padding: 15px;
+  position: fixed;
+  width: 97% !important;
+  z-index: 10000;
+  margin: 0px 10px !important;
+  display: block;
+  font-size: 22px !important;
+  font-weight: 600;
+  text-transform: uppercase;
 }
-
 .productListing{
   position: relative;
 }
 .sidebar{
-   display: none;
-   width: 0px;
-   left: 0px;
-   transition: all ease-in-out 0.3s;
+  display: none;
+  width: 0px;
+  left: 0px;
+  transition: all ease-in-out 0.3s;
 }
 .sidebar.openSidebar{
   display: block;

@@ -41,7 +41,6 @@ table.table.table-borderless thead tr{
   transition: all 0.3s ease-in-out;
   border: none;
 }
-
 td.custom-price{
   text-align: end;
   padding-right: 15px !important; 
@@ -52,15 +51,16 @@ td.custom-price{
 
 /***** table css  ******/
 @media (min-width : 576px) and (max-width: 768px){
-  .checkout-left{
-    display: block;
-    width: 100%;
-  }
-  .checkout-right{
-    display: block;
-    width: 100%;
-    margin-top: 20px;
-  }
+.checkout-left{
+  display: block;
+  width: 100%;
+}
+.checkout-right{
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+}
+
 }
 
 

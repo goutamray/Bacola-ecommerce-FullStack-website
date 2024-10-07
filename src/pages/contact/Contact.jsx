@@ -5,10 +5,10 @@ import { FaPhoneVolume } from "react-icons/fa6";
 import { IoMailOutline } from "react-icons/io5";
 
 import { useState } from "react";
-
-import "./Contact.css"
 import createToast from "../../utils/toastify";
 import { postMessageData } from "../../utils/api";
+
+import "./Contact.css"; 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [input, setInput] = useState({
@@ -56,8 +56,6 @@ const Contact = () => {
       })
 
   };
-
-
 
   return (
     <>
